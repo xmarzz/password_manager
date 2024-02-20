@@ -1,5 +1,5 @@
 # Database files
-*.db
+database.db
 
 # Executable files
 sqlite3.exe
