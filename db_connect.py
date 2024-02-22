@@ -11,6 +11,10 @@ def get_records(conn):
     column_names = [description[0] for description in cursor.description]
     return rows, column_names
 
-
+def new_user(conn, user, hashed_pwd):
+   cursor=conn.cursor()
+   cursor.execute("insert into users (username, password) values (?,?)",(user, hashed_pwd))
+   conn.commit()
+   return user 
 
 
